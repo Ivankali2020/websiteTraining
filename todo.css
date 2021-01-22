@@ -1,0 +1,150 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+
+body{
+    
+    width: 100%;
+    height: 100vh;
+    background-image: repeating-linear-gradient(249deg, transparent 0px, transparent 3px,rgb(255,255,255) 3px, rgb(255,255,255) 32px),repeating-linear-gradient(307deg, transparent 0px, transparent 3px,rgb(255,255,255) 3px, rgb(255,255,255) 32px),linear-gradient(90deg, hsl(191,85%,78%),hsl(242.429,85%,78%),hsl(293.857,85%,78%),hsl(345.286,85%,78%),hsl(36.714,85%,78%),hsl(88.143,85%,78%),hsl(139.571,85%,78%));
+}
+
+.wrapper {
+    margin: 120px auto;
+    max-width: 400px;
+    background-image: radial-gradient(circle at center center, transparent 0%,rgb(33,33,33) 99%),repeating-linear-gradient(65deg, rgba(197,32,32, 0.73) 0px, rgba(197,32,32, 0.73) 1px,transparent 1px, transparent 6px),repeating-linear-gradient(155deg, rgba(197,32,32, 0.73) 0px, rgba(197,32,32, 0.73) 1px,transparent 1px, transparent 6px),linear-gradient(155deg, rgb(33,33,33),rgb(33,33,33));
+    border:2px solid rgb(255, 5, 47);
+    border-radius: 30px;
+    padding: 20px;
+   
+   
+}
+
+.header{
+    margin-bottom: 25px;
+    text-align: center;
+    color: rgb(253, 56, 99);
+    font-family:  'Abel', sans-serif;;
+    border-bottom-right-radius: 9px;
+    border-bottom-left-radius: 9px;
+    box-shadow:0px 12px 12px -5px  rgb(167, 55, 55);
+    border-bottom: 0.5px solid rgb(224, 11, 11);
+}
+.inputText{
+
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-family: 'Texturina', serif;
+    
+}
+.addbtn{
+    background-image: radial-gradient(circle at center center, transparent 0%,rgb(33,33,33) 99%),repeating-linear-gradient(65deg, rgba(197,32,32, 0.73) 0px, rgba(197,32,32, 0.73) 1px,transparent 1px, transparent 6px),repeating-linear-gradient(155deg, rgba(197,32,32, 0.73) 0px, rgba(197,32,32, 0.73) 1px,transparent 1px, transparent 6px),linear-gradient(155deg, rgb(33,33,33),rgb(33,33,33));
+
+    align-items: center;
+    padding: 8px 15px;
+    border: 1px solid white;
+    border-radius: 20px;
+    outline-style: none;
+    font-family: 'Texturina', serif;
+    color: ghostwhite;
+}
+.addbtn:hover{
+    color: rgb(255, 0, 0);
+    box-shadow:1px 10px 10px -6px  rgb(167, 55, 55);
+    border:1px solid rgb(219, 11, 11);
+
+}
+.input{
+    width: 220px;
+    padding: 10px 15px;
+    border: 1px solid white;
+    border-radius: 20px;
+    margin-left: 10px;
+    outline-style: none;
+    background-size: 440px;
+}
+.input:hover{
+    color: rgb(255, 0, 0);
+    box-shadow:1px 10px 10px -6px  rgb(167, 55, 55);
+    border:1px solid rgb(219, 11, 11);
+    background-image: repeating-linear-gradient(249deg, transparent 0px, transparent 3px,rgb(255,255,255) 3px, rgb(255,255,255) 32px),repeating-linear-gradient(307deg, transparent 0px, transparent 3px,rgb(255,255,255) 3px, rgb(255,255,255) 32px),linear-gradient(90deg, hsl(191,85%,78%),hsl(242.429,85%,78%),hsl(293.857,85%,78%),hsl(345.286,85%,78%),hsl(36.714,85%,78%),hsl(88.143,85%,78%),hsl(139.571,85%,78%));
+}
+
+.listshow{
+    /* border: 1px solid rgb(129, 129, 126);
+    border-radius: 20px; */
+    /* background-color: ivory; */
+    margin-left: 10px;
+    color: ivory;
+    display: block;
+    font-family: 'Texturina', serif;
+
+}
+li{
+    font-family: 'Texturina', serif;
+    position: relative;
+    overflow: hidden;
+    height: 45px;
+    line-height: 45px;
+    transition: 0.3s;
+   /* display: flex;
+   justify-content: space-between; */
+
+}
+ li:hover .deletebtn{
+    
+    display: inline;
+    transition: 0.3s;
+    right: 100px;
+}
+li:hover .editbtn{
+
+   
+    display: inline;
+    transition: 0.3s;
+    right: 2px;
+}
+
+.deletebtn{
+    color: ghostwhite;
+    width: 74px;
+    position: absolute;
+    right: -100px;
+    padding:  5px;
+    border: 1px solid rgb(199, 176, 176); 
+    outline-style: none;
+    transition: all 0.3s ease;
+    border-radius: 20px;
+    margin-top: 10px;
+    background-image: radial-gradient(circle at center center, transparent 0%,rgb(33,33,33) 99%),repeating-linear-gradient(65deg, rgba(197,32,32, 0.73) 0px, rgba(197,32,32, 0.73) 1px,transparent 1px, transparent 6px),repeating-linear-gradient(155deg, rgba(197,32,32, 0.73) 0px, rgba(197,32,32, 0.73) 1px,transparent 1px, transparent 6px),linear-gradient(155deg, rgb(33,33,33),rgb(33,33,33));
+
+}
+.deletebtn:hover{
+    color: rgb(255, 0, 0);
+    box-shadow:1px 10px 10px -6px  rgb(167, 55, 55);
+    border:1px solid rgb(219, 11, 11);
+}
+.editbtn:hover{
+    color: rgb(255, 0, 0);
+    box-shadow:1px 10px 10px -6px  rgb(167, 55, 55);
+    border:1px solid rgb(219, 11, 11);
+}
+.editbtn{
+    color: ghostwhite;
+    border-radius: 20px;
+    width: 74px;
+    position: absolute;
+    right: -155px;
+    padding:  5px;
+    border: 1px solid rgb(192, 134, 134); 
+    outline-style: none; 
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    background-image: radial-gradient(circle at center center, transparent 0%,rgb(33,33,33) 99%),repeating-linear-gradient(65deg, rgba(197,32,32, 0.73) 0px, rgba(197,32,32, 0.73) 1px,transparent 1px, transparent 6px),repeating-linear-gradient(155deg, rgba(197,32,32, 0.73) 0px, rgba(197,32,32, 0.73) 1px,transparent 1px, transparent 6px),linear-gradient(155deg, rgb(33,33,33),rgb(33,33,33));
+
+
+}

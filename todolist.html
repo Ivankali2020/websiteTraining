@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO DO LIST</title>
+    <link rel="stylesheet" href="todo.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Texturina:wght@100&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header"><h1 class="animate__animated animate__bounce">To Do List</h1></header>
+        <div class="inputText">
+            <input type="text" class="input" id="inputfield" placeholder="Type Your Schedule !!!!" >
+            <button id="addbtn" class="addbtn" onclick="addbtn()">ADD LIST</button>
+        </div >
+       <div class="listshow">
+        <ul class="list" id="list">
+            
+        </ul>
+       </div>
+    </div>
+    <script>
+        let input = document.getElementById("inputfield");
+        let list = document.getElementById("list");
+        let minlengthtext = 3 ;
+        let i = 1;
+        
+
+        function filter (x){
+            if(x){
+                if(x.length >= minlengthtext){
+                    return x ;
+                }else {
+                    alert ("plz fil at least three words");
+                }
+            }else{
+                alert("EMPTY TEXT");
+            }
+        }
+
+        function addbtn(){
+            let inputText = filter(input.value );
+           
+            if (inputText){
+                list.innerHTML += ` <li id="order${i}">
+                                         <span id="addText${i}">${inputText}</span>
+                                        <button class="deletebtn" id="deletebtn" onclick="del(${i})">Delete</button>
+                                        <button class="editbtn" id="editbtn" onclick="edit(${i})">Edit</button>
+                                    </li> `; 
+                input.value = "";
+                i++;
+            }
+        }
+        function del(id){
+             let current = document.getElementById(`order${id}`);
+             let currentText = document.getElementById(`addText${id}`);
+             let confirmdelete = confirm (`Are You Sure To Delete ${currentText.innerHTML}`);
+            
+            if (confirmdelete){
+                list.removeChild(current);
+            }else{
+                console.log("cancel")
+            }
+        }
+
+        function edit(id){
+            let currentText = document.getElementById(`addText${id}`);
+            let edit = prompt(`are u sure to edit "${currentText.innerHTML}`)
+
+             if (filter (edit)) {
+                 currentText.innerHTML = edit ;
+             }
+            }
+    </script>
+</body>
+</html>
